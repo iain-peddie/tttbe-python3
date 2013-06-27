@@ -31,6 +31,22 @@ if __name__ == "__main__":
 Chapters 19-20
 --------------
 No further changes needed to be made to make the code in chapter 19 run under python3
+
+Chapter 21
+----------
+* Converted formatting to python3 formatting, which doesn't require formatting types by
+default. For example, the first update of TestResult to return a runCount read from the object
+was
+
+~~~~~ python
+return "%d run, 0 failed" % self.runCount
+~~~~~
+
+This becomes:
+
+~~~~~ python
+return "{} run, 0 failed".format(self.runCount)
+~~~~~
    
 Copying
 =======
