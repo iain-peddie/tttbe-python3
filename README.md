@@ -34,6 +34,8 @@ No further changes needed to be made to make the code in chapter 19 run under py
 
 Chapter 21
 ----------
+* TestResult needs to be imported to the classes using it properly
+
 * Converted formatting to python3 formatting, which doesn't require formatting types by
 default. For example, the first update of TestResult to return a runCount read from the object
 was
@@ -47,6 +49,10 @@ This becomes:
 ~~~~~ python
 return "{} run, 0 failed".format(self.runCount)
 ~~~~~
+
+Chapter 22
+----------
+No new changes were needed.
    
 Copying
 =======
