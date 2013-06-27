@@ -5,13 +5,21 @@ class TestCase:
         self.name = name
 
     def setUp(self):
-        # default implementation does nothing. This method should
-        # be overridden to test anything useful.
-        pass
+        """default implementation does nothing. 
+
+        This method is called before each test is run. Test classes which need
+        setup code should override this method."""
+
+    def tearDown(self):
+        """Default implementation does nothing.
+
+        This method is called after each test has run. Test classes which need
+        teardown code should override this method."""
 
     def run(self):
         self.setUp()
         method = getattr(self, self.name)
         method()
+        self.tearDown()
 
 
