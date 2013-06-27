@@ -27,6 +27,10 @@ from WasRun import WasRun
 if __name__ == "__main__":
    TestCaseTest("testRunning").run()
 ~~~~~
+
+Chapter 19
+----------
+No further changes needed to be made to make the code in chapter 19 run under python3
    
 Copying
 =======
