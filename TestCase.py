@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 from TestResult import TestResult
+import traceback
 
 class TestCase:
     def __init__(self, name):
@@ -18,16 +19,17 @@ class TestCase:
         This method is called after each test has run. Test classes which need
         teardown code should override this method."""
 
-    def run(self):
-        result = TestResult()
+    def run(self, result):
         result.testStarted()
         self.setUp()
         try:
             method = getattr(self, self.name)
             method()
-        except:
+        except Exception as ex:
+            traceback.print_exc()
+#            print(ex)
+#            print(ex.stackTrace())
             result.testFailed()
         self.tearDown()
-        return result
 
 
