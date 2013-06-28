@@ -31,7 +31,15 @@ class TestCaseTest(TestCase):
 
         
 if __name__ == "__main__":
-    TestCaseTest("testTemplateMethod").run()
-    TestCaseTest("testResult").run()
-    TestCaseTest("testFailedResultFormatting").run()
-    TestCaseTest("testFailedResult").run()
+    testMethods = [ "testTemplateMethod",
+                    "testResult", 
+                    "testFailedResultFormatting",
+                    "testFailedResult" ];
+    for method in testMethods:
+        case = TestCaseTest(method)
+        result = case.run()
+        print("{} : {}".format(method, result.summary()))
+#    print(TestCaseTest("testTemplateMethod").run().summary())
+#    print(TestCaseTest("testResult").run().summary())
+#    print(TestCaseTest("testFailedResultFormatting").run().summary())
+#    print(TestCaseTest("testFailedResult").run().summary())
