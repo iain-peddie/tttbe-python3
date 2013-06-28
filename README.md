@@ -53,6 +53,11 @@ return "{} run, 0 failed".format(self.runCount)
 Chapter 22
 ----------
 No new changes were needed.
+
+Chapter 23
+----------
+
+A repeat of previous changes in print and import statements.
    
 Copying
 =======
